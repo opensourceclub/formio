@@ -21,6 +21,8 @@ Node.js 和 MongoDB
 启动服务器
 ```
 git clone https://github.com/xiyangliu/formio.git
+cd formio
+git checkout translation
 npm install
 npm start
 Are you sure you wish to install? (y/N): y
