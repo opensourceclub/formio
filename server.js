@@ -6,6 +6,7 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const fs = require('fs-extra');
+const cors = require('cors');
 const path = require('path');
 const util = require('./src/util/util');
 require('colors');
@@ -50,8 +51,10 @@ module.exports = function(options) {
     express: app
   });
 
+  app.use(cors());
+
   // Mount the client application.
-  app.use('/', express.static(path.join(__dirname, '/client/dist')));
+  app.use('/', express.static(path.join(__dirname, '/client')));
 
   // Load the form.io server.
   const server = options.server || require('./index')(config);

@@ -187,7 +187,7 @@ module.exports = function(formio, items, done) {
         done();
       }
       const repos = [
-        'None',
+        'Default Agile Form Builder',
         'https://github.com/formio/formio-app-humanresources',
         'https://github.com/formio/formio-app-servicetracker',
         'https://github.com/formio/formio-app-todo',
@@ -279,7 +279,7 @@ module.exports = function(formio, items, done) {
 
       // Download the client.
       download(
-        'https://nodeload.github.com/formio/formio-app-formio/zip/master',
+        'https://nodeload.github.com/xiyangliu/formio-app-react/zip/releases',
         'client.zip',
         'client',
         done
@@ -297,7 +297,7 @@ module.exports = function(formio, items, done) {
         return done();
       }
 
-      extract('client.zip', 'formio-app-formio-master', 'client', done);
+      extract('client.zip', 'formio-app-react-releases', 'client', done);
     },
 
     /**
