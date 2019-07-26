@@ -14,7 +14,6 @@ Node.js 和 MongoDB
       - 安装Docker
       - 启动mongo docker image
          ```
-         npm install
          docker-compose up mongo
          ```
 启动Node.js服务器
