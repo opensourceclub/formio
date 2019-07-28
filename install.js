@@ -9,6 +9,7 @@ nunjucks.configure([], {watch: false});
 const util = require('./src/util/util');
 const debug = require('debug')('formio:error');
 const path = require('path');
+const ncp = require('ncp').ncp;
 
 module.exports = function(formio, items, done) {
   // The project that was created.
@@ -306,6 +307,27 @@ module.exports = function(formio, items, done) {
      * @param done
      * @return {*}
      */
+    copyTemplate: function(done) {
+      if (application) {
+        templateFile = 'app';
+        return done();
+      }
+      if (process.env.ROOT_EMAIL) {
+        templateFile = 'client';
+        done();
+      }
+
+      util.log('Copying template to client');
+      ncp('template', 'client');
+      done();
+    },
+
+    /**
+     * Select the template to use.
+     *
+     * @param done
+     * @return {*}
+     */
     whatTemplate: function(done) {
       if (application) {
         templateFile = 'app';
@@ -464,11 +486,12 @@ module.exports = function(formio, items, done) {
   prompt.start();
   async.series([
     steps.areYouSure,
-    steps.whatApp,
-    steps.downloadApp,
-    steps.extractApp,
-    steps.downloadClient,
-    steps.extractClient,
+    // steps.whatApp,
+    // steps.downloadApp,
+    // steps.extractApp,
+    // steps.downloadClient,
+    // steps.extractClient,
+    steps.copyTemplate,
     steps.whatTemplate,
     steps.importTemplate,
     steps.createRootUser

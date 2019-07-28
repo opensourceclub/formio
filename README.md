@@ -24,12 +24,8 @@ git clone https://github.com/opensourceclub/formio.git
 npm install
 npm start
 Are you sure you wish to install? (y/N): y
-Which Github application would you like to install? 1
 Local file path or just press Enter for default.:  (client) 
 Enter your email address for the root account.:  <输入admin用户名，如admin@example.com>
 Enter your password for the root account.:  <输入admin密码，如1234>
 ```
-浏览页面
-```
-http://localhost:3001
-```
+启动前端app: https://github.com/opensourceclub/formio-app-react
