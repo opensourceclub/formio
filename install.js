@@ -279,7 +279,7 @@ module.exports = function(formio, items, done) {
 
       // Download the client.
       download(
-        'https://nodeload.github.com/xiyangliu/formio-app-react/zip/releases',
+        'https://nodeload.github.com/opensourceclub/formio-app-react/zip/releases',
         'client.zip',
         'client',
         done
