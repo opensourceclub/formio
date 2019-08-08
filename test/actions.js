@@ -448,9 +448,9 @@ module.exports = function(app, template, hook) {
             defaultValue: '',
             suffix: '',
             prefix: '',
-            placeholder: 'Enter your email address',
+            placeholder: '请输入邮箱地址',
             key: 'email',
-            label: 'Email',
+            label: '邮箱',
             inputType: 'email',
             tableView: true,
             input: true
@@ -463,9 +463,9 @@ module.exports = function(app, template, hook) {
             defaultValue: '',
             suffix: '',
             prefix: '',
-            placeholder: 'Enter your password',
+            placeholder: '请输入密码',
             key: 'password',
-            label: 'Password',
+            label: '密码',
             inputType: 'password',
             tableView: true,
             input: true
@@ -659,7 +659,7 @@ module.exports = function(app, template, hook) {
 
       // The temp form with the add RoleAction for existing submissions.
       var emailForm = {
-        title: 'Email Form',
+        title: '邮箱 Form',
         name: 'emailform',
         path: 'emailform',
         type: 'form',
@@ -714,9 +714,9 @@ module.exports = function(app, template, hook) {
             defaultValue: '',
             suffix: '',
             prefix: '',
-            placeholder: 'Enter your email address',
+            placeholder: '请输入邮箱地址',
             key: 'email',
-            label: 'Email',
+            label: '邮箱',
             inputType: 'email',
             tableView: true,
             input: true
@@ -726,7 +726,7 @@ module.exports = function(app, template, hook) {
 
       // The temp role add action for existing submissions.
       var emailAction = {
-        title: 'Email',
+        title: '邮箱',
         name: 'email',
         handler: ['after'],
         method: ['create'],
@@ -2303,9 +2303,9 @@ module.exports = function(app, template, hook) {
               defaultValue: '',
               suffix: '',
               prefix: '',
-              placeholder: 'Enter your email address',
+              placeholder: '请输入邮箱地址',
               key: 'email',
-              label: 'Email',
+              label: '邮箱',
               inputType: 'email',
               tableView: true,
               input: true
@@ -2514,9 +2514,9 @@ module.exports = function(app, template, hook) {
               defaultValue: '',
               suffix: '',
               prefix: '',
-              placeholder: 'Enter your email address',
+              placeholder: '请输入邮箱地址',
               key: 'email',
-              label: 'Email',
+              label: '邮箱',
               inputType: 'email',
               tableView: true,
               input: true
@@ -2601,9 +2601,9 @@ module.exports = function(app, template, hook) {
               defaultValue: '',
               suffix: '',
               prefix: '',
-              placeholder: 'Enter your email address',
+              placeholder: '请输入邮箱地址',
               key: 'email',
-              label: 'Email',
+              label: '邮箱',
               inputType: 'email',
               tableView: true,
               input: true

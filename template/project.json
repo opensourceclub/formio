@@ -77,9 +77,9 @@
           "defaultValue": "",
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your email address",
+          "placeholder": "请输入邮箱地址",
           "key": "email",
-          "label": "Email",
+          "label": "邮箱",
           "inputType": "email",
           "tableView": true,
           "input": true
@@ -90,7 +90,7 @@
           "protected": true,
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your password.",
+          "placeholder": "请输入密码",
           "key": "password",
           "label": "Password",
           "inputType": "password",
@@ -108,7 +108,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "提交",
           "input": true
         }
       ]
@@ -167,9 +167,9 @@
           "defaultValue": "",
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your email address",
+          "placeholder": "请输入邮箱地址",
           "key": "email",
-          "label": "Email",
+          "label": "邮箱",
           "inputType": "email",
           "tableView": true,
           "input": true
@@ -180,7 +180,7 @@
           "protected": true,
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your password.",
+          "placeholder": "请输入密码",
           "key": "password",
           "label": "Password",
           "inputType": "password",
@@ -198,7 +198,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "提交",
           "input": true
         }
       ]
@@ -231,10 +231,10 @@
           "defaultValue": "",
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your email address",
+          "placeholder": "请输入邮箱地址",
           "key": "email",
           "lockKey": true,
-          "label": "Email",
+          "label": "邮箱",
           "inputType": "email",
           "tableView": true,
           "input": true
@@ -245,7 +245,7 @@
           "protected": true,
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your password.",
+          "placeholder": "请输入密码",
           "key": "password",
           "lockKey": true,
           "label": "Password",
@@ -264,7 +264,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "提交",
           "input": true
         }
       ]
@@ -295,10 +295,10 @@
           "defaultValue": "",
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your email address",
+          "placeholder": "请输入邮箱地址",
           "key": "email",
           "lockKey": true,
-          "label": "Email",
+          "label": "邮箱",
           "inputType": "email",
           "tableView": true,
           "input": true
@@ -309,7 +309,7 @@
           "protected": true,
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your password.",
+          "placeholder": "请输入密码",
           "key": "password",
           "lockKey": true,
           "label": "Password",
@@ -326,7 +326,7 @@
           "leftIcon": "",
           "size": "md",
           "key": "submit",
-          "label": "Submit",
+          "label": "提交",
           "input": true,
           "type": "button"
         }

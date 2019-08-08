@@ -6499,7 +6499,7 @@ module.exports = function(app, template, hook) {
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "提交",
           "input": true
         }]
       };
@@ -6825,9 +6825,9 @@ module.exports = function(app, template, hook) {
                   defaultValue: '',
                   suffix: '',
                   prefix: '',
-                  placeholder: 'Enter your email address',
+                  placeholder: '请输入邮箱地址',
                   key: 'email',
-                  label: 'Email',
+                  label: '邮箱',
                   inputType: 'email',
                   tableView: true,
                   input: true
@@ -6838,9 +6838,9 @@ module.exports = function(app, template, hook) {
                   protected: true,
                   suffix: '',
                   prefix: '',
-                  placeholder: 'Enter your password.',
+                  placeholder: '请输入密码.',
                   key: 'password',
-                  label: 'Password',
+                  label: '密码',
                   inputType: 'password',
                   tableView: false,
                   input: true
@@ -6854,7 +6854,7 @@ module.exports = function(app, template, hook) {
                   leftIcon: '',
                   size: 'md',
                   key: 'submit',
-                  label: 'Submit',
+                  label: '提交',
                   input: true,
                   type: 'button'
                 }
@@ -6935,9 +6935,9 @@ module.exports = function(app, template, hook) {
                   defaultValue: '',
                   suffix: '',
                   prefix: '',
-                  placeholder: 'Enter your email address',
+                  placeholder: '请输入邮箱地址',
                   key: 'email',
-                  label: 'Email',
+                  label: '邮箱',
                   inputType: 'email',
                   tableView: true,
                   input: true
@@ -6948,9 +6948,9 @@ module.exports = function(app, template, hook) {
                   protected: true,
                   suffix: '',
                   prefix: '',
-                  placeholder: 'Enter your password.',
+                  placeholder: '请输入密码.',
                   key: 'password',
-                  label: 'Password',
+                  label: '密码',
                   inputType: 'password',
                   tableView: false,
                   input: true
@@ -6964,7 +6964,7 @@ module.exports = function(app, template, hook) {
                   leftIcon: '',
                   size: 'md',
                   key: 'submit',
-                  label: 'Submit',
+                  label: '提交',
                   input: true,
                   type: 'button'
                 }
@@ -9595,24 +9595,24 @@ module.exports = function(app, template, hook) {
           .resource('client', [
             {
               type: 'email',
-              label: 'Email',
+              label: '邮箱',
               key: 'email'
             },
             {
               type: 'password',
-              label: 'Password',
+              label: '密码',
               key: 'password'
             }
           ])
           .form('clientLogin', [
             {
               type: 'email',
-              label: 'Email',
+              label: '邮箱',
               key: 'email'
             },
             {
               type: 'password',
-              label: 'Password',
+              label: '密码',
               key: 'password'
             }
           ], {
@@ -9641,24 +9641,24 @@ module.exports = function(app, template, hook) {
           .resource('manager', [
             {
               type: 'email',
-              label: 'Email',
+              label: '邮箱',
               key: 'email'
             },
             {
               type: 'password',
-              label: 'Password',
+              label: '密码',
               key: 'password'
             }
           ])
           .form('managerLogin', [
             {
               type: 'email',
-              label: 'Email',
+              label: '邮箱',
               key: 'email'
             },
             {
               type: 'password',
-              label: 'Password',
+              label: '密码',
               key: 'password'
             }
           ], {

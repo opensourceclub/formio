@@ -52,10 +52,10 @@
           "defaultValue": "",
           "suffix": "",
           "prefix": "",
-          "placeholder": "Enter your email address",
+          "placeholder": "请输入邮箱",
           "key": "email",
           "lockKey": true,
-          "label": "Email",
+          "label": "邮箱",
           "inputType": "email",
           "tableView": true,
           "input": true

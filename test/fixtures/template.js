@@ -40,9 +40,9 @@ module.exports = () => {
         defaultValue: '',
         suffix: '',
         prefix: '',
-        placeholder: 'Enter your email address',
+        placeholder: '请输入邮箱地址',
         key: 'email',
-        label: 'Email',
+        label: '邮箱',
         inputType: 'email',
         tableView: true,
         input: true
@@ -53,9 +53,9 @@ module.exports = () => {
         protected: true,
         suffix: '',
         prefix: '',
-        placeholder: 'Enter your password.',
+        placeholder: '请输入密码',
         key: 'password',
-        label: 'Password',
+        label: '密码',
         inputType: 'password',
         tableView: false,
         input: true
@@ -79,7 +79,7 @@ module.exports = () => {
   // Create an email template.
   template.actions['user:email'] = {
     name: 'email',
-    title: 'Email',
+    title: '邮箱',
     form: 'user',
     priority: 0,
     method: ['create'],
@@ -89,7 +89,7 @@ module.exports = () => {
       from: 'no-reply@form.io',
       emails: '{{ data.email }}',
       subject: 'New user {{ _id }} created',
-      message: 'Email: {{ data.email }}'
+      message: '邮箱: {{ data.email }}'
     }
   };
 
