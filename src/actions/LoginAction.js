@@ -24,7 +24,7 @@ module.exports = function(router) {
     static info(req, res, next) {
       next(null, {
         name: 'login',
-        title: 'Login',
+        title: '登录',
         description: 'Provides a way to login to the application.',
         priority: 2,
         defaults: {

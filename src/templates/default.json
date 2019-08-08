@@ -435,7 +435,7 @@
     },
     "userLogin:login": {
       "name": "login",
-      "title": "Login",
+      "title": "登录",
       "form": "userLogin",
       "priority": 2,
       "method": ["create"],
@@ -466,7 +466,7 @@
     },
     "userRegister:login": {
       "name": "login",
-      "title": "Login",
+      "title": "登录",
       "form": "userRegister",
       "priority": 2,
       "method": ["create"],
@@ -500,7 +500,7 @@
     },
     "adminLogin:login": {
       "name": "login",
-      "title": "Login",
+      "title": "登录",
       "form": "adminLogin",
       "priority": 2,
       "method": ["create"],

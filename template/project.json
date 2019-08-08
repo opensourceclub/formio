@@ -92,7 +92,7 @@
           "prefix": "",
           "placeholder": "请输入密码",
           "key": "password",
-          "label": "Password",
+          "label": "密码",
           "inputType": "password",
           "tableView": false,
           "input": true
@@ -182,7 +182,7 @@
           "prefix": "",
           "placeholder": "请输入密码",
           "key": "password",
-          "label": "Password",
+          "label": "密码",
           "inputType": "password",
           "tableView": false,
           "input": true
@@ -248,7 +248,7 @@
           "placeholder": "请输入密码",
           "key": "password",
           "lockKey": true,
-          "label": "Password",
+          "label": "密码",
           "inputType": "password",
           "tableView": false,
           "input": true
@@ -312,7 +312,7 @@
           "placeholder": "请输入密码",
           "key": "password",
           "lockKey": true,
-          "label": "Password",
+          "label": "密码",
           "inputType": "password",
           "tableView": false,
           "input": true
