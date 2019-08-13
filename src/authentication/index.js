@@ -206,10 +206,10 @@ module.exports = function(router) {
   const authenticate = function(req, forms, userField, passField, username, password, next) {
     // Make sure they have provided a username and password.
     if (!username) {
-      return next('Missing username');
+      return next('用户名不能为空');
     }
     if (!password) {
-      return next('Missing password');
+      return next('密码不能为空');
     }
 
     const query = {deleted: {$eq: null}};
@@ -235,11 +235,11 @@ module.exports = function(router) {
         return next(err);
       }
       if (!user) {
-        return next('User or password was incorrect');
+        return next('用户名或密码错误');
       }
 
       if (!_.get(user.data, passField)) {
-        return next('Your account does not have a password. You must reset your password to login.');
+        return next('您的帐户没有密码。您必须重置密码才能登录。');
       }
 
       // Compare the provided password.
@@ -248,7 +248,7 @@ module.exports = function(router) {
           return next(err);
         }
         if (!value) {
-          return next('User or password was incorrect', {user: user});
+          return next('用户名或密码错误', {user: user});
         }
 
         // Load the form associated with this user record.
@@ -260,7 +260,7 @@ module.exports = function(router) {
             return next(err);
           }
           if (!form) {
-            return next('User form not found.');
+            return next('未找到用户表单');
           }
 
           // Allow anyone to hook and modify the user.
