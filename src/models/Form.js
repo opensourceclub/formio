@@ -49,8 +49,7 @@ module.exports = (formio) => {
     return _(shortcuts);
   };
 
-  const uniqueMessage = 'may only contain letters, numbers, hyphens, and forward slashes ' +
-    '(but cannot start or end with a hyphen or forward slash)';
+  const uniqueMessage = `只能包含字母、数字、连字符和正斜杠，但不能以连字符或正斜杠开始或结束`;
   const uniqueValidator = (property) => function(value, done) {
     const query = {deleted: {$eq: null}};
     query[property] = value;
@@ -74,54 +73,52 @@ module.exports = (formio) => {
     });
   };
 
-  const keyError = 'A component on this form has an invalid or missing API key. Keys must only contain alphanumeric ' +
-    'characters or hyphens, and must start with a letter. Please check each component\'s API Property Name.';
+  const keyError = `此表单上的组件具有无效或丢失的API KEY。KEY必须只包含字母数字字符或连字符，并且必须以字母开头。请检查每个组件的API属性名`;
 
-  const shortcutError = 'A component on this form has an invalid shortcut. Shortcuts must only contain alphabetic ' +
-    'characters or must be equal to \'Enter\' or \'Esc\'';
+  const shortcutError = `此表单上的组件有无效的快捷方式。快捷方式必须只包含字母字符或必须等于'Enter'或'Esc'`;
 
   const model = require('./BaseModel')({
     schema: new formio.mongoose.Schema({
       title: {
         type: String,
-        description: 'The title for the form.',
+        description: '表单的标题',
         required: true
       },
       name: {
         type: String,
-        description: 'The machine name for this form.',
+        description: '此表单的名称',
         required: true,
         validate: [
           {
-            message: `The Name ${uniqueMessage}`,
+            message: `名称 ${uniqueMessage}`,
             validator: (value) => !invalidRegex.test(value)
           },
           {
             isAsync: true,
-            message: 'The Name must be unique per Project.',
+            message: '每个项目的名称必须是惟一的',
             validator: uniqueValidator('name')
           }
         ]
       },
       path: {
         type: String,
-        description: 'The path for this resource.',
+        description: '资源的路径',
         index: true,
         required: true,
         lowercase: true,
         trim: true,
         validate: [
           {
-            message: `The Path ${uniqueMessage}`,
+            message: `路径 ${uniqueMessage}`,
             validator: (value) => !invalidRegex.test(value)
           },
           {
-            message: 'Path cannot end in `submission` or `action`',
+            message: '路径不能以`submission` 或 `action` 结尾',
             validator: (path) => !path.match(/(submission|action)\/?$/)
           },
           {
             isAsync: true,
-            message: 'The Path must be unique per Project.',
+            message: '每个项目的路径必须是惟一的',
             validator: uniqueValidator('path')
           }
         ]
@@ -131,16 +128,16 @@ module.exports = (formio) => {
         enum: ['form', 'resource'],
         required: true,
         default: 'form',
-        description: 'The form type.',
+        description: '表单类型',
         index: true
       },
       display: {
         type: String,
-        description: 'The display method for this form'
+        description: '表单的展现方式'
       },
       action: {
         type: String,
-        description: 'A custom action URL to submit the data to.'
+        description: '提交数据的自定义操作URL'
       },
       tags: {
         type: [String],
@@ -167,7 +164,7 @@ module.exports = (formio) => {
       },
       components: {
         type: [formio.mongoose.Schema.Types.Mixed],
-        description: 'An array of components within the form.',
+        description: '表单中的组件数组',
         validate: [
           {
             message: keyError,
@@ -182,7 +179,7 @@ module.exports = (formio) => {
             isAsync: true,
             validator: (components, valid) => {
               const paths = componentPaths(components);
-              const msg = 'Component keys must be unique: ';
+              const msg = '组件的KEY必须唯一';
               const uniq = paths.uniq();
               const diff = paths.filter((value, index, collection) => _.includes(collection, value, index + 1));
 
@@ -197,7 +194,7 @@ module.exports = (formio) => {
             isAsync: true,
             validator: (components, valid) => {
               const shortcuts = componentShortcuts(components);
-              const msg = 'Component shortcuts must be unique: ';
+              const msg = '组件的快照必须唯一';
               const uniq = shortcuts.uniq();
               const diff = shortcuts.filter((value, index, collection) => _.includes(collection, value, index + 1));
 
@@ -212,11 +209,11 @@ module.exports = (formio) => {
       },
       settings: {
         type: formio.mongoose.Schema.Types.Mixed,
-        description: 'Custom form settings object.'
+        description: '自定义表单设置'
       },
       properties: {
         type: formio.mongoose.Schema.Types.Mixed,
-        description: 'Custom form properties.'
+        description: '自定义表单属性'
       }
     })
   });
