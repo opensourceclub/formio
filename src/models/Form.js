@@ -7,7 +7,7 @@ module.exports = (formio) => {
   const hook = require('../util/hook')(formio);
   const util = formio.util;
   /* eslint-disable no-useless-escape */
-  const invalidRegex = /[^0-9a-zA-Z\-\/]|^\-|\-$|^\/|\/$/;
+  const invalidRegex = /[^0-9a-zA-Z\-\/_]|^\-|\-$|^\/|\/$/;
   const validKeyRegex = /^(\w|\w[\w-.]*\w)$/;
   const validShortcutRegex = /^([A-Z]|Enter|Esc)$/i;
   /* eslint-enable no-useless-escape */
